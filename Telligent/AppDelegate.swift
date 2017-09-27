@@ -9,14 +9,43 @@
 import UIKit
 import CoreData
 
+@available(iOS 10.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        var myUserDefaults :UserDefaults!
+//        
+//        // 取得儲存的預設資料
+//        myUserDefaults = UserDefaults.standard
+//        if (myUserDefaults.object(forKey: "loginState") as! String) == "autologin" {
+//            
+//        }
+        
+//        var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+        
+        if (UserDefaults.standard.object(forKey: "loginState") == nil) {
+            print("key exist")
+            
+            UserDefaults.standard.set("applogin",forKey: "loginState")
+            UserDefaults.standard.synchronize()
+            
+        }
+        
+        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert,
+                                                         UIUserNotificationType.badge,
+                                                         UIUserNotificationType.sound]
+        
+        let pushNotificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
+        
+        application.registerUserNotificationSettings(pushNotificationSettings)
+        
+        application.registerForRemoteNotifications()
+        
         return true
     }
 
@@ -44,6 +73,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    //MARK: - Push Notifications
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        var pushToken = String(format: "%@", deviceToken as CVarArg)
+        pushToken = pushToken.trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
+        pushToken = pushToken.replacingOccurrences(of: " ", with: "")
+        
+        UserDefaults.standard.set(pushToken, forKey: "pushToken")
+        UserDefaults.standard.synchronize()
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        
+        print("notification userInfo",userInfo)
+        
+
+        UserDefaults.standard.set(userInfo, forKey: "apsInfo")
+        let objectValue:Any? = UserDefaults.standard.object(forKey: "apsInfo")
+        
+        print(objectValue!)
+        
+        let dataInfo : NSDictionary = userInfo["data"] as! NSDictionary
+        
+        let notificationType : String = dataInfo.object(forKey: "Type") as! String
+        
+        if notificationType == "NewMsgNotice"{
+            
+            let localNotification = UILocalNotification()
+            localNotification.fireDate = NSDate(timeIntervalSinceNow: 5) as Date
+            localNotification.alertTitle = dataInfo.object(forKey: "Title") as? String
+            localNotification.alertBody = dataInfo.object(forKey: "Body") as? String
+            localNotification.timeZone = NSTimeZone.default
+            localNotification.applicationIconBadgeNumber = Int(dataInfo.object(forKey: "NotReadNum") as! String)!
+            
+//            UIApplication.sharedApplication.scheduleLocalNotification(localNotification)
+            
+            UIApplication.shared.scheduleLocalNotification(localNotification)
+            
+        }
+        else if  notificationType == "UpdateNotReadNum"{
+            
+            
+            UIApplication.shared.applicationIconBadgeNumber = Int(dataInfo.object(forKey: "NotReadNum") as! String)!
+        }
+        else{
+            NotificationCenter.default.post(name: Notification.Name(rawValue: notificationType), object: self, userInfo: userInfo)
+        }
+    }
+    
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

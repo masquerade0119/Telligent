@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +21,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="E0g-f5-EpV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_pic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XrX-tC-hF3">
+                                <rect key="frame" x="50" y="230.5" width="275" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XrX-tC-hF3" secondAttribute="height" multiplier="4:3" id="hAi-Ru-Ylq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XrX-tC-hF3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3SS-sm-YXi"/>
+                            <constraint firstAttribute="trailing" secondItem="E0g-f5-EpV" secondAttribute="trailing" id="7g5-Rt-HFF"/>
+                            <constraint firstItem="E0g-f5-EpV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="BH7-dB-72z"/>
+                            <constraint firstItem="XrX-tC-hF3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="HVy-yX-YV7"/>
+                            <constraint firstItem="E0g-f5-EpV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="V7x-4q-dkF"/>
+                            <constraint firstItem="XrX-tC-hF3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XQd-aG-CTS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="E0g-f5-EpV" secondAttribute="bottom" id="tEw-VB-X1D"/>
+                            <constraint firstAttribute="trailing" secondItem="XrX-tC-hF3" secondAttribute="trailing" constant="50" id="uWt-kU-Bwl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +50,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1080" height="1701"/>
+        <image name="login_pic_logo" width="480" height="360"/>
+    </resources>
 </document>
