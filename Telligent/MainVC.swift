@@ -14,6 +14,8 @@ class MainVC: UIViewController,UIWebViewDelegate {
     @IBOutlet weak var showWV: UIWebView!
     @IBOutlet weak var showProgress: UIProgressView!
     @IBOutlet weak var showbar: UINavigationBar!
+    //目前網域
+    var currenthost:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +66,8 @@ class MainVC: UIViewController,UIWebViewDelegate {
     
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        
+        //取得目前網域
+        currenthost =  self.showWV.request?.url?.host
         showProgress.setProgress(1.0, animated: true)
     }
     
@@ -72,5 +75,25 @@ class MainVC: UIViewController,UIWebViewDelegate {
         
         showProgress.setProgress(1.0, animated: true)
     }
+    
+    //在webview上點擊a link觸發
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        //點擊欲前往的網址
+        let url = request.url
+        //網域
+        let host = url?.host
+            if ( navigationType == .linkClicked ) {
+                if #available(iOS 10.0, *) {//ios10以上版本
+                    //商品預覽頁 圖片資料夾內有uploadfiles的路徑 非目前網域內的網站
+                    if !(host?.lowercased()==currenthost.lowercased()) || String(describing: url).lowercased().contains("uploadfiles")||String(describing: url).lowercased().contains("productpreview") {
+                        //開啟 safari
+                        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+                        return false
+                    }
+                }
+        }
+        return true
+    }
+    
 
 }
