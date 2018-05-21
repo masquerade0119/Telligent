@@ -179,20 +179,25 @@ class VerificationVC: UIViewController {
         let dataInfo : NSDictionary = objectValue!["data"] as! NSDictionary
         let dtmExpiryDate : String = dataInfo.object(forKey: "dtmExpiryDate") as! String
         
-        let dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd HH:mm:ss", options: 0, locale: NSLocale.current)
+        //let dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd HH:mm:ss", options: 0, locale: NSLocale.current)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 28800)
         
+        let datedtmExpiryDate : Date = dateFormatter.date(from: dtmExpiryDate)!
+        //以上為了處理傳進字串沒帶時區,寫死時區為+8
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        
+        let dtmExpiryDateString = dateFormatter.string(from: datedtmExpiryDate)
         
         let date1 = NSDate()
-        let date2 : NSDate = dateFormatter.date(from: dtmExpiryDate)! as NSDate
+        let date2 : Date = dateFormatter.date(from: dtmExpiryDateString)!
         
         print("date1 : ",date1)
         print("date2 : ",date2)
-        
-        let date1String = dateFormatter.string(from: date1 as Date)
-        let date2String = dateFormatter.string(from: date2 as Date)
-        
         
         if date1.compare(date2 as Date) == ComparisonResult.orderedAscending {
             print("date1 is earlier")

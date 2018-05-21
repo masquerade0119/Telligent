@@ -19,6 +19,7 @@
 		E6CB801E1F1E11DA00B1EE81 /* Telligent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6CB801C1F1E11DA00B1EE81 /* Telligent.xcdatamodeld */; };
 		E6CB80201F1E11DA00B1EE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CB801F1F1E11DA00B1EE81 /* Assets.xcassets */; };
 		E6CB80231F1E11DA00B1EE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CB80211F1E11DA00B1EE81 /* LaunchScreen.storyboard */; };
+		FB44D1B920ABD56D004BC9FD /* MainMkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E6CB801F1F1E11DA00B1EE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6CB80221F1E11DA00B1EE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6CB80241F1E11DA00B1EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMkVC.swift; sourceTree = "<group>"; };
 		FEC7AEAC51ED70E8760AD1A1 /* Pods-Telligent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telligent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telligent/Pods-Telligent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				E678033B1F49D62D004ED81E /* MenuVC.swift */,
 				E67803411F53E75B004ED81E /* MenuTVC.swift */,
 				E67803431F540D96004ED81E /* MainVC.swift */,
+				FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */,
 				E622B5CE1F74AE4500CC42A1 /* Connectivity.swift */,
 				E622B5CD1F7273FB00CC42A1 /* swift-MBProgressHUD-Bridging-Header.h */,
 				E6CB80191F1E11DA00B1EE81 /* Main.storyboard */,
@@ -246,6 +249,7 @@
 				E6CB80181F1E11DA00B1EE81 /* ViewController.swift in Sources */,
 				E67803401F4A65E1004ED81E /* VerificationVC.swift in Sources */,
 				E678033C1F49D62D004ED81E /* MenuVC.swift in Sources */,
+				FB44D1B920ABD56D004BC9FD /* MainMkVC.swift in Sources */,
 				E622B5CF1F74AE4500CC42A1 /* Connectivity.swift in Sources */,
 				E6CB801E1F1E11DA00B1EE81 /* Telligent.xcdatamodeld in Sources */,
 				E6CB80161F1E11DA00B1EE81 /* AppDelegate.swift in Sources */,
@@ -385,7 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telexpress.SocialChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "be64f11b-078b-4d69-83d8-07aeda5cce73";
+				PROVISIONING_PROFILE = "db63b82d-0c37-41bb-9f55-823914fc1e65";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -408,7 +412,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telexpress.SocialChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0fc68386-425f-4fdd-9cdf-c9b5eae7f671";
+				PROVISIONING_PROFILE = "bceb245c-4a8e-460a-9194-a43df9f89f33";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_AS;
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

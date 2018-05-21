@@ -14,7 +14,7 @@ class MenuVC: SlideMenuController {
      
     
     override func awakeFromNib() {
-        if let mainController = self.storyboard?.instantiateViewController(withIdentifier: "Main") {
+        if let mainController = self.storyboard?.instantiateViewController(withIdentifier: "MainMK") {
             self.mainViewController = mainController
         }
         if let lefController = self.storyboard?.instantiateViewController(withIdentifier: "Left") {
