@@ -60,4 +60,8 @@
         }
         decisionHandler(.allow)
     }
+    
+    @IBAction func openLeftButton(_ sender: UIBarButtonItem) {
+        self.openLeft()
+    }
  }
