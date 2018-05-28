@@ -232,35 +232,54 @@ class ViewController: UIViewController,UITextFieldDelegate{
         
         
         var currentUrl : String = ""
-        
+        //1 SCRMQA
         if (parameters["strCompanyAccountID"] as! String) == "SCRMQA" {
             currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-QA/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //2 SCRMQAP2
         if (parameters["strCompanyAccountID"] as! String) == "SCRMQAP2" {
             currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-QA-P2/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //3 ASOUAT
         if (parameters["strCompanyAccountID"] as! String) == "ASOUAT" {
             currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-ASO-QA/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //4 寬庭美學UAT
         if (parameters["strCompanyAccountID"] as! String) == "寬庭美學UAT" {
             currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-Kuans-QA/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //5 ASO
         if (parameters["strCompanyAccountID"] as! String) == "ASO" {
             currentUrl = "https://telligent-aso.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //6 寬庭美學
         if (parameters["strCompanyAccountID"] as! String) == "寬庭美學" {
             currentUrl = "https://telligent-kuans.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //7 KSPACE
         if (parameters["strCompanyAccountID"] as! String) == "KSPACE" {
             currentUrl = "https://telligent-kspace.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
-        
+        //8 LIFE8
+        if (parameters["strCompanyAccountID"] as! String) == "LIFE8" {
+            currentUrl = "https://telligent-life8.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //9 ABBOTT
+        if (parameters["strCompanyAccountID"] as! String) == "ABBOTT_AND" {
+            currentUrl = "https://telligent-abbott.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //10 PM
+        if (parameters["strCompanyAccountID"] as! String) == "PMUAT" {
+            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-PM/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //11 PMDemo
+        if (parameters["strCompanyAccountID"] as! String) == "PMDEMO" {
+            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Demo/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //12 MJN
+        if (parameters["strCompanyAccountID"] as! String) == "MJN" {
+            currentUrl = "https://telligent-MJN.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
         print(currentUrl)
         
         if currentUrl.isEmpty{
