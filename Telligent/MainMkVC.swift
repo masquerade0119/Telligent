@@ -16,8 +16,17 @@
         let result = UserDefaults.standard.dictionary(forKey: "result")! as NSDictionary
         let url = NSURL (string: result.object(forKey: "APPRedirect") as! String)
         let request = URLRequest(url: url! as URL)
-
+        
         webView = WKWebView(frame: CGRect(x: 0, y: 66, width: self.view.bounds.size.width, height: self.view.bounds.size.height-66))
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 2436:
+                webView = WKWebView(frame: CGRect(x: 0, y: 86, width: self.view.bounds.size.width, height: self.view.bounds.size.height-86))
+            default:
+                print("unknown")
+            }
+        }
+        
         webView.navigationDelegate = self
         webView.uiDelegate = self
         webView.load(request)
@@ -28,6 +37,14 @@
         progressView.tintColor = UIColor.init(red: 0.66, green: 0.58, blue: 0.31, alpha: 1.0)
         // Set frame to exact below of navigation bar if available
         progressView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 2)
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 2436:
+                progressView.frame = CGRect(x: 0, y: 84, width: self.view.bounds.size.width, height: 2)
+            default:
+                print("unknown")
+            }
+        }
         self.view.addSubview(progressView)
         
         webView.addObserver(self, forKeyPath:
