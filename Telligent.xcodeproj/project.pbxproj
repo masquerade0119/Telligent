@@ -398,7 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Telligent/Telligent.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4VSATKVJA8;
@@ -407,7 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telexpress.SocialChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db63b82d-0c37-41bb-9f55-823914fc1e65";
+				PROVISIONING_PROFILE = "4b9020c8-decb-41f1-8038-10856a576dc5";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_Dev;
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -430,7 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telexpress.SocialChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bceb245c-4a8e-460a-9194-a43df9f89f33";
+				PROVISIONING_PROFILE = "778a738c-e2b3-4be1-87ff-22c7dbee702e";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_AS;
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
