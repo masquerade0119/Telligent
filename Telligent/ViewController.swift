@@ -280,6 +280,10 @@ class ViewController: UIViewController,UITextFieldDelegate{
         if (parameters["strCompanyAccountID"] as! String) == "MJN" {
             currentUrl = "https://telligent-MJN.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
+        //13 Simulation
+        if (parameters["strCompanyAccountID"] as! String) == "SIMULATION" {
+            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Simulation/APPAPi/MDAuthAPi/LoginCheck"
+        }
         print(currentUrl)
         
         if currentUrl.isEmpty{
