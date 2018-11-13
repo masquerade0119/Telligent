@@ -284,6 +284,14 @@ class ViewController: UIViewController,UITextFieldDelegate{
         if (parameters["strCompanyAccountID"] as! String) == "SIMULATION" {
             currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Simulation/APPAPi/MDAuthAPi/LoginCheck"
         }
+        //14 bbtugg
+        if (parameters["strCompanyAccountID"] as! String) == "BBTUGG" {
+            currentUrl = "https://telligent-bbtugg.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //15 bbtmos
+        if (parameters["strCompanyAccountID"] as! String) == "BBTMOS" {
+            currentUrl = "https://telligent-bbtmos.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
         print(currentUrl)
         
         if currentUrl.isEmpty{
