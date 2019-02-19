@@ -270,7 +270,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
         }
         //10 PM
         if (parameters["strCompanyAccountID"] as! String) == "PMUAT" {
-            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-PM/APPAPi/MDAuthAPi/LoginCheck"
+            currentUrl = "https://telligent-pm.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
         //11 PMDemo
         if (parameters["strCompanyAccountID"] as! String) == "PMDEMO" {
