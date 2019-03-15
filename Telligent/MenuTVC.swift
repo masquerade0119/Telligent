@@ -74,32 +74,85 @@ class MenuTVC: UITableViewController {
             
             var currentUrl : String = ""
             
+            //1 SCRMQA
             if loginAccountID == "SCRMQA" {
                 currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-QA/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //2 SCRMQAP2
             if loginAccountID == "SCRMQAP2" {
                 currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-QA-P2/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //3 ASOUAT
             if loginAccountID == "ASOUAT" {
                 currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-ASO-QA/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //4 寬庭美學UAT
             if loginAccountID == "寬庭美學UAT" {
                 currentUrl = "https://teola.3rdchannel.com.tw/SocialChat-Kuans-QA/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //5 ASO
             if loginAccountID == "ASO" {
                 currentUrl = "https://telligent-aso.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //6 寬庭美學
             if loginAccountID == "寬庭美學" {
                 currentUrl = "https://telligent-kuans.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
             }
-            
+            //7 KSPACE
             if loginAccountID == "KSPACE" {
                 currentUrl = "https://telligent-kspace.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //8 LIFE8
+            if loginAccountID == "LIFE8" {
+                currentUrl = "https://telligent-life8.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //9 ABBOTT
+            if loginAccountID == "ABBOTT_AND" {
+                currentUrl = "https://telligent-abbott.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //10 PM
+            if loginAccountID == "PMUAT" {
+                currentUrl = "https://telligent-pm.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //11 PMDemo
+            if loginAccountID == "PMDEMO" {
+                currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Demo/APPAPi/MDAuthAPi/Logout"
+            }
+            //12 MJN
+            if loginAccountID == "MJN" {
+                currentUrl = "https://telligent-MJN.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //13 Simulation
+            if loginAccountID == "SIMULATION" {
+                currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Simulation/APPAPi/MDAuthAPi/Logout"
+            }
+            //14 bbtugg
+            if loginAccountID == "BBTUGG" {
+                currentUrl = "https://telligent-bbtugg.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //15 bbtmos
+            if loginAccountID == "BBTMOS" {
+                currentUrl = "https://telligent-bbtmos.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //16 JP
+            if loginAccountID == "JP手工定制" {
+                currentUrl = "http://telligent-jp.digitalcenter.cn/APPAPi/MDAuthAPi/Logout"
+            }
+            //17 寬庭美學CN
+            if loginAccountID == "宽庭美学" {
+                currentUrl = "http://telligent-kuans.digitalcenter.cn/APPAPi/MDAuthAPi/Logout"
+            }
+            //18 SIT
+            if loginAccountID == "SIT" {
+                currentUrl = "https://teola.3rdchannel.com.tw/Telligent-SIT/APPAPi/MDAuthAPi/Logout"
+            }
+            //19 京華鑽石
+            if loginAccountID == "EMPEROR.DIAMOND" {
+                currentUrl = "https://telligent-emperordiamond.3rdchannel.com.tw/APPAPi/MDAuthAPi/Logout"
+            }
+            //20 PXG
+            if loginAccountID == "PXG_GOLF" {
+                currentUrl = "http://telligent-pxg.digitalcenter.cn/APPAPi/MDAuthAPi/Logout"
             }
             
             print(currentUrl)

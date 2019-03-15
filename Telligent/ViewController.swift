@@ -312,7 +312,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
             currentUrl = "https://telligent-emperordiamond.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
         //20 PXG
-        if (parameters["strCompanyAccountID"] as! String) == "PXG" {
+        if (parameters["strCompanyAccountID"] as! String) == "PXG_GOLF" {
             currentUrl = "http://telligent-pxg.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
         }
         
