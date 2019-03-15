@@ -32,14 +32,6 @@ class ViewController: UIViewController,UITextFieldDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.white.cgColor
-        border.frame = CGRect(x: 0, y: phoneTextField.frame.size.height - width, width:  phoneTextField.frame.size.width, height: phoneTextField.frame.size.height)
-        border.borderWidth = width
-        phoneTextField.layer.addSublayer(border)
-        phoneTextField.layer.masksToBounds = true
-        
         let companyIV = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         companyIV.image = UIImage(named: "login_ico_company")
         phoneTextField.leftView = companyIV
@@ -48,14 +40,6 @@ class ViewController: UIViewController,UITextFieldDelegate{
         phoneTextField.attributedPlaceholder = NSAttributedString(string: phoneTextField.placeholder!, attributes:[NSForegroundColorAttributeName : UIColor.white.withAlphaComponent(0.3)])
         phoneTextField.delegate = self
         
-        let border2 = CALayer()
-        let width2 = CGFloat(1.0)
-        border2.borderColor = UIColor.white.cgColor
-        border2.frame = CGRect(x: 0, y: accountTextField.frame.size.height - width2, width:  accountTextField.frame.size.width, height: accountTextField.frame.size.height)
-        border2.borderWidth = width2
-        accountTextField.layer.addSublayer(border2)
-        accountTextField.layer.masksToBounds = true
-        
         let accountIV = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         accountIV.image = UIImage(named: "login_ico_people")
         accountTextField.leftView = accountIV
@@ -63,15 +47,6 @@ class ViewController: UIViewController,UITextFieldDelegate{
         accountTextField.leftViewMode = UITextFieldViewMode.always
         accountTextField.attributedPlaceholder = NSAttributedString(string: accountTextField.placeholder!, attributes: [NSForegroundColorAttributeName : UIColor.white.withAlphaComponent(0.3)])
         accountTextField.delegate = self
-        
-        
-        let border3 = CALayer()
-        let width3 = CGFloat(1.0)
-        border3.borderColor = UIColor.white.cgColor
-        border3.frame = CGRect(x: 0, y: accountTextField.frame.size.height - width3, width:  accountTextField.frame.size.width, height: accountTextField.frame.size.height)
-        border3.borderWidth = width3
-        passwordTextField.layer.addSublayer(border3)
-        passwordTextField.layer.masksToBounds = true
         
         let passwordIV = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         passwordIV.image = UIImage(named: "login_ico_key")
@@ -140,6 +115,34 @@ class ViewController: UIViewController,UITextFieldDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // 在螢幕大小調適後再去設定文字欄位底線
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.white.cgColor
+        border.frame = CGRect(x: 0, y: phoneTextField.frame.size.height - width, width:  phoneTextField.frame.size.width, height: phoneTextField.frame.size.height)
+        border.borderWidth = width
+        phoneTextField.layer.addSublayer(border)
+        phoneTextField.layer.masksToBounds = true
+        
+        let border2 = CALayer()
+        let width2 = CGFloat(1.0)
+        border2.borderColor = UIColor.white.cgColor
+        border2.frame = CGRect(x: 0, y: accountTextField.frame.size.height - width2, width:  accountTextField.frame.size.width, height: accountTextField.frame.size.height)
+        border2.borderWidth = width2
+        accountTextField.layer.addSublayer(border2)
+        accountTextField.layer.masksToBounds = true
+        
+        let border3 = CALayer()
+        let width3 = CGFloat(1.0)
+        border3.borderColor = UIColor.white.cgColor
+        border3.frame = CGRect(x: 0, y: accountTextField.frame.size.height - width3, width:  accountTextField.frame.size.width, height: accountTextField.frame.size.height)
+        border3.borderWidth = width3
+        passwordTextField.layer.addSublayer(border3)
+        passwordTextField.layer.masksToBounds = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
@@ -225,7 +228,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
                 "strDeviceID": UserDefaults.standard.string(forKey: "pushToken")!,
                 "strDeviceType":"iOS",
                 "strLoginID":accountTextField.text!,
-                "strCompanyAccountID":companyName,//去掉空格，全轉小寫比較字串
+                "strCompanyAccountID":companyName,//去掉空格，全轉大寫比較字串
                 "strPassword":passwordTextField.text!
             ]
         }
@@ -292,6 +295,27 @@ class ViewController: UIViewController,UITextFieldDelegate{
         if (parameters["strCompanyAccountID"] as! String) == "BBTMOS" {
             currentUrl = "https://telligent-bbtmos.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
+        //16 JP
+        if (parameters["strCompanyAccountID"] as! String) == "JP手工定制" {
+            currentUrl = "http://telligent-jp.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //17 寬庭美學CN
+        if (parameters["strCompanyAccountID"] as! String) == "宽庭美学" {
+            currentUrl = "http://telligent-kuans.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //18 SIT
+        if (parameters["strCompanyAccountID"] as! String) == "SIT" {
+            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-SIT/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //19 京華鑽石
+        if (parameters["strCompanyAccountID"] as! String) == "EMPEROR.DIAMOND" {
+            currentUrl = "https://telligent-emperordiamond.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //20 PXG
+        if (parameters["strCompanyAccountID"] as! String) == "PXG" {
+            currentUrl = "http://telligent-pxg.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        
         print(currentUrl)
         
         if currentUrl.isEmpty{
