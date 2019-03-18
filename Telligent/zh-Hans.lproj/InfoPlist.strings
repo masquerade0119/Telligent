@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Telligent
+
+  Created by Lynn Cheng on 2019/3/18.
+  Copyright © 2019年 Telexpress_MaLynn. All rights reserved.
+*/
+
+NSCameraUsageDescription = "您可以透过拍照将图片发送给对话对象";
+NSMicrophoneUsageDescription = "您可以透过麦克风留言给对话对象";
+NSPhotoLibraryUsageDescription = "您可以从相簿选取相片发送给对话对象";

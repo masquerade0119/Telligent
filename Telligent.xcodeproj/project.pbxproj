@@ -20,6 +20,7 @@
 		E6CB80201F1E11DA00B1EE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6CB801F1F1E11DA00B1EE81 /* Assets.xcassets */; };
 		E6CB80231F1E11DA00B1EE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CB80211F1E11DA00B1EE81 /* LaunchScreen.storyboard */; };
 		FB44D1B920ABD56D004BC9FD /* MainMkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */; };
+		FBD72991223F407000D89E9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBD72993223F407000D89E9D /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		E6CB80221F1E11DA00B1EE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6CB80241F1E11DA00B1EE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMkVC.swift; sourceTree = "<group>"; };
+		FBD72994223F411D00D89E9D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FBD72995223F412900D89E9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FEC7AEAC51ED70E8760AD1A1 /* Pods-Telligent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telligent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telligent/Pods-Telligent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,7 @@
 				E6CB801F1F1E11DA00B1EE81 /* Assets.xcassets */,
 				E6CB80211F1E11DA00B1EE81 /* LaunchScreen.storyboard */,
 				E6CB80241F1E11DA00B1EE81 /* Info.plist */,
+				FBD72993223F407000D89E9D /* InfoPlist.strings */,
 				E6CB801C1F1E11DA00B1EE81 /* Telligent.xcdatamodeld */,
 			);
 			path = Telligent;
@@ -168,6 +172,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = E6CB80091F1E11DA00B1EE81;
 			productRefGroup = E6CB80131F1E11DA00B1EE81 /* Products */;
@@ -185,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6CB80231F1E11DA00B1EE81 /* LaunchScreen.storyboard in Resources */,
+				FBD72991223F407000D89E9D /* InfoPlist.strings in Resources */,
 				E6CB80201F1E11DA00B1EE81 /* Assets.xcassets in Resources */,
 				E6CB801B1F1E11DA00B1EE81 /* Main.storyboard in Resources */,
 			);
@@ -276,6 +283,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		FBD72993223F407000D89E9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBD72994223F411D00D89E9D /* zh-Hant */,
+				FBD72995223F412900D89E9D /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -283,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -343,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
