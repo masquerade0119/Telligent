@@ -192,9 +192,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
             }
         }
         else{
-            
             UIAlertView(title: "網路狀態", message: "未連接至網路，無法顯示網頁，請檢查您的裝置是否連上網路或wifi", delegate: nil, cancelButtonTitle: "OK").show();
-            
         }
     }
     
@@ -221,11 +219,11 @@ class ViewController: UIViewController,UITextFieldDelegate{
             
             print("companyName",companyName)
             
-            print ("token",UserDefaults.standard.string(forKey: "pushToken")!)
+            print ("token",UserDefaults.standard.string(forKey: "pushToken") ?? "")
             
             parameters = [
                 "LoginType":"applogin",
-                "strDeviceID": UserDefaults.standard.string(forKey: "pushToken")!,
+                "strDeviceID": UserDefaults.standard.string(forKey: "pushToken") ?? "",
                 "strDeviceType":"iOS",
                 "strLoginID":accountTextField.text!,
                 "strCompanyAccountID":companyName,//去掉空格，全轉大寫比較字串
@@ -277,7 +275,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
         }
         //11 PMDemo
         if (parameters["strCompanyAccountID"] as! String) == "PMDEMO" {
-            currentUrl = "https://teola.3rdchannel.com.tw/Telligent-Demo/APPAPi/MDAuthAPi/LoginCheck"
+            currentUrl = "https://telligent-pmdemo.3rdchannel.com.tw/APPAPi/MDAuthAPi/LoginCheck"
         }
         //12 MJN
         if (parameters["strCompanyAccountID"] as! String) == "MJN" {
@@ -297,11 +295,11 @@ class ViewController: UIViewController,UITextFieldDelegate{
         }
         //16 JP
         if (parameters["strCompanyAccountID"] as! String) == "JP手工定制" {
-            currentUrl = "http://telligent-jp.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+            currentUrl = "https://telligent-jp.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
         }
         //17 寬庭美學CN
         if (parameters["strCompanyAccountID"] as! String) == "宽庭美学" {
-            currentUrl = "http://telligent-kuans.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+            currentUrl = "https://telligent-kuans.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
         }
         //18 SIT
         if (parameters["strCompanyAccountID"] as! String) == "SIT" {
@@ -313,38 +311,39 @@ class ViewController: UIViewController,UITextFieldDelegate{
         }
         //20 PXG
         if (parameters["strCompanyAccountID"] as! String) == "PXG_GOLF" {
-            currentUrl = "http://telligent-pxg.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+            currentUrl = "https://telligent-pxg.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //21 PMDemoCN
+        if (parameters["strCompanyAccountID"] as! String) == "PMDEMOCN" {
+            currentUrl = "https://telligent-pmdemo.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
+        }
+        //22 FCC
+        if (parameters["strCompanyAccountID"] as! String) == "FCCGROUP" {
+            currentUrl = "https://telligent-fccgroup.digitalcenter.cn/APPAPi/MDAuthAPi/LoginCheck"
         }
         
         print(currentUrl)
         
         if currentUrl.isEmpty{
-            
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.label.text = "登入失敗，請檢查您的公司帳號密碼是否輸入正確。"
             //背景渐变效果
             hud.dimBackground = true
             
             //延迟隐藏
-            //            hud.hide(true, afterDelay: 0.8)
             hud.hide(animated: true, afterDelay: 0.8)
         }
         else{
-            
             let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.label.text = "登入中"
             //背景渐变效果
             hud.dimBackground = true
             
-            
             Alamofire.request(currentUrl,
                               method: .post,
                               parameters: parameters,
                               encoding: JSONEncoding.default).responseJSON { response in
-                                
-                                
                                 print(response)
-                                
                                 
                                 //to get status code
                                 if let status = response.response?.statusCode {
@@ -364,26 +363,23 @@ class ViewController: UIViewController,UITextFieldDelegate{
                                                 
                                                 UIApplication.shared.applicationIconBadgeNumber = JSON.value(forKey:"NotReadNum") as! Int
                                                 
-                                                
                                                 UserDefaults.standard.set(JSON, forKey: "result")
                                                 UserDefaults.standard.set(parameters, forKey: "loginNow")
                                                 UserDefaults.standard.set("autologin", forKey: "loginState")
                                                 UserDefaults.standard.synchronize()
                                                 
                                                 let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "menuVC") as! MenuVC
+                                                
                                                 hud.hide(animated: true, afterDelay: 0.8)
                                                 
                                                 self.phoneTextField.text = ""
                                                 self.accountTextField.text = ""
                                                 self.passwordTextField.text = ""
                                                 
-                                                
                                                 self.navigationController?.pushViewController(secondViewController, animated: true)
                                             }
                                             else{
-                                                
                                                 hud.hide(animated: true)
-                                                
                                                 
                                                 let alertController = UIAlertController(title : "提示",
                                                                                         message : JSON.object(forKey: "statusMsg") as? String,
@@ -404,16 +400,14 @@ class ViewController: UIViewController,UITextFieldDelegate{
                                                              animated : true,
                                                              completion : nil)
                                             }
-                                            
                                         }
-                                        
                                     default:
+                                        UserDefaults.standard.removeObject(forKey: "result")
+                                        UserDefaults.standard.removeObject(forKey: "loginNow")
+                                        UserDefaults.standard.set("applogin", forKey: "loginState")
+                                        UserDefaults.standard.synchronize()
                                         
-                                        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                                         hud.label.text = "登入失敗，請檢查您的公司帳號密碼是否輸入正確"
-                                        //背景渐变效果
-                                        hud.dimBackground = true
-                                        
                                         //延迟隐藏
                                         hud.hide(animated: true, afterDelay: 0.8)
                                         
