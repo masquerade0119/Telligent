@@ -20,10 +20,12 @@
         webView = WKWebView(frame: CGRect(x: 0, y: 66, width: self.view.bounds.size.width, height: self.view.bounds.size.height-66))
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
-            case 2436:
-                webView = WKWebView(frame: CGRect(x: 0, y: 86, width: self.view.bounds.size.width, height: self.view.bounds.size.height-86))
-            default:
-                print("unknown")
+                // iPhone X(XS), XR, XS MAX
+                case 2436, 1792, 2688:
+                    // 高度加上劉海區塊
+                    webView = WKWebView(frame: CGRect(x: 0, y: 86, width: self.view.bounds.size.width, height: self.view.bounds.size.height-86))
+                default:
+                    break
             }
         }
         
@@ -39,10 +41,12 @@
         progressView.frame = CGRect(x: 0, y: 64, width: self.view.bounds.size.width, height: 2)
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
-            case 2436:
-                progressView.frame = CGRect(x: 0, y: 84, width: self.view.bounds.size.width, height: 2)
-            default:
-                print("unknown")
+                // iPhone X(XS), XR, XS MAX
+                case 2436, 1792, 2688:
+                    // 高度加上劉海區塊
+                    progressView.frame = CGRect(x: 0, y: 84, width: self.view.bounds.size.width, height: 2)
+                default:
+                    break
             }
         }
         self.view.addSubview(progressView)
