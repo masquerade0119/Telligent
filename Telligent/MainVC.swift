@@ -26,9 +26,6 @@ class MainVC: UIViewController,UIWebViewDelegate {
         
         let leftBtn = UIBarButtonItem(image: UIImage(named: "ico_menu"), style: UIBarButtonItemStyle.plain, target: self, action: Selector("openLeftButton:"))
 
-        
-        
-        
         let result = UserDefaults.standard.dictionary(forKey: "result")! as NSDictionary
         
         showWV.delegate=self
@@ -44,10 +41,8 @@ class MainVC: UIViewController,UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -60,10 +55,8 @@ class MainVC: UIViewController,UIWebViewDelegate {
     }
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        
         showProgress.setProgress(0.1, animated: false)
     }
-    
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         //取得目前網域
@@ -72,7 +65,6 @@ class MainVC: UIViewController,UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        
         showProgress.setProgress(1.0, animated: true)
     }
     
@@ -94,6 +86,4 @@ class MainVC: UIViewController,UIWebViewDelegate {
         }
         return true
     }
-    
-
 }

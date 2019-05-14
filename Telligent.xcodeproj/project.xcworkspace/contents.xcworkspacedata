@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Telligent.xcodeproj">
+      location = "group:../en.lproj">
+   </FileRef>
+   <FileRef
+      location = "group:../zh-Hans.lproj">
+   </FileRef>
+   <FileRef
+      location = "group:../zh-Hant.lproj">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

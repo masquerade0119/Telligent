@@ -11,21 +11,13 @@ import Alamofire
 
 class MenuTVC: UITableViewController {
     
-    
-    
     //    var TableArray = Array<String;:Any> = Array<String:Any>()
     
     var TableArray = [[String:Any]]()
     
-    
     override func viewDidLoad() {
-        
         let logout : Dictionary<String, Any> = ["title": "登出", "id": "logout", "image": "ico_logout"]
-        
-        
         TableArray = [logout]
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,12 +46,7 @@ class MenuTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath)
         
-        
-        
         if selectedCell?.textLabel?.text == "登出"{
-            
-            
-            
             let result = UserDefaults.standard.object(forKey: "result") as! NSDictionary
             
             let parameters: [String : Any] = result.object(forKey: "data") as! [String : Any]

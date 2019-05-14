@@ -9,10 +9,7 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
-
 import Foundation
-
-
 
 class ViewController: UIViewController,UITextFieldDelegate{
     

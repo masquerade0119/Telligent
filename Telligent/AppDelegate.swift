@@ -91,10 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-        
         print("notification userInfo",userInfo)
         
-
         UserDefaults.standard.set(userInfo, forKey: "apsInfo")
         let objectValue:Any? = UserDefaults.standard.object(forKey: "apsInfo")
         
@@ -173,6 +171,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

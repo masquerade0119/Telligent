@@ -73,7 +73,8 @@
                         return
                     }
                 }
-                else{
+                else
+                {
                     decisionHandler(.allow)
                     return
                 }

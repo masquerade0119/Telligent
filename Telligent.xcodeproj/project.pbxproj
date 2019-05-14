@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1CCA43F2367BE81943B040 /* Pods_Telligent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D901DC19ED26C1D4E23319F /* Pods_Telligent.framework */; };
 		E622B5CF1F74AE4500CC42A1 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E622B5CE1F74AE4500CC42A1 /* Connectivity.swift */; };
 		E678033C1F49D62D004ED81E /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678033B1F49D62D004ED81E /* MenuVC.swift */; };
 		E67803401F4A65E1004ED81E /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E678033F1F4A65E1004ED81E /* VerificationVC.swift */; };
@@ -21,12 +20,13 @@
 		E6CB80231F1E11DA00B1EE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CB80211F1E11DA00B1EE81 /* LaunchScreen.storyboard */; };
 		FB44D1B920ABD56D004BC9FD /* MainMkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */; };
 		FBD72991223F407000D89E9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBD72993223F407000D89E9D /* InfoPlist.strings */; };
+		FBF19A0D228A955B0041D859 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FBF19A0C228A955B0041D859 /* Podfile */; };
+		FBF19A10228A99630041D859 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF19A0E228A99630041D859 /* MBProgressHUD.m */; };
+		FBF19A13228A9AEE0041D859 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF19A12228A9AEE0041D859 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D901DC19ED26C1D4E23319F /* Pods_Telligent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telligent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DF64EBAA99FC787BE8C616 /* Pods-Telligent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telligent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Telligent/Pods-Telligent.debug.xcconfig"; sourceTree = "<group>"; };
-		E622B5CD1F7273FB00CC42A1 /* swift-MBProgressHUD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-MBProgressHUD-Bridging-Header.h"; sourceTree = "<group>"; };
 		E622B5CE1F74AE4500CC42A1 /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		E62490F51F5D07A90046D21A /* Telligent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Telligent.entitlements; sourceTree = "<group>"; };
 		E678033B1F49D62D004ED81E /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -44,6 +44,12 @@
 		FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMkVC.swift; sourceTree = "<group>"; };
 		FBD72994223F411D00D89E9D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FBD72995223F412900D89E9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FBF19A0C228A955B0041D859 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FBF19A0E228A99630041D859 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Pods/MBProgressHUD/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		FBF19A0F228A99630041D859 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Pods/MBProgressHUD/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		FBF19A11228A9AEE0041D859 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FBF19A12228A9AEE0041D859 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FBF19A23228A9D890041D859 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		FEC7AEAC51ED70E8760AD1A1 /* Pods-Telligent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telligent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telligent/Pods-Telligent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1CCA43F2367BE81943B040 /* Pods_Telligent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,21 +73,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D59B460D0DB3D7019C41D661 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7D901DC19ED26C1D4E23319F /* Pods_Telligent.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E6CB80091F1E11DA00B1EE81 = {
 			isa = PBXGroup;
 			children = (
+				FBF19A0C228A955B0041D859 /* Podfile */,
 				E6CB80141F1E11DA00B1EE81 /* Telligent */,
 				E6CB80131F1E11DA00B1EE81 /* Products */,
 				7003CF332AAEEDAF81DF37F4 /* Pods */,
-				D59B460D0DB3D7019C41D661 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +94,10 @@
 		E6CB80141F1E11DA00B1EE81 /* Telligent */ = {
 			isa = PBXGroup;
 			children = (
+				FBF19A0F228A99630041D859 /* MBProgressHUD.h */,
+				FBF19A0E228A99630041D859 /* MBProgressHUD.m */,
+				FBF19A11228A9AEE0041D859 /* Reachability.h */,
+				FBF19A12228A9AEE0041D859 /* Reachability.m */,
 				E62490F51F5D07A90046D21A /* Telligent.entitlements */,
 				E6CB80151F1E11DA00B1EE81 /* AppDelegate.swift */,
 				E6CB80171F1E11DA00B1EE81 /* ViewController.swift */,
@@ -106,13 +107,13 @@
 				E67803431F540D96004ED81E /* MainVC.swift */,
 				FB44D1B820ABD56D004BC9FD /* MainMkVC.swift */,
 				E622B5CE1F74AE4500CC42A1 /* Connectivity.swift */,
-				E622B5CD1F7273FB00CC42A1 /* swift-MBProgressHUD-Bridging-Header.h */,
 				E6CB80191F1E11DA00B1EE81 /* Main.storyboard */,
 				E6CB801F1F1E11DA00B1EE81 /* Assets.xcassets */,
 				E6CB80211F1E11DA00B1EE81 /* LaunchScreen.storyboard */,
 				E6CB80241F1E11DA00B1EE81 /* Info.plist */,
 				FBD72993223F407000D89E9D /* InfoPlist.strings */,
 				E6CB801C1F1E11DA00B1EE81 /* Telligent.xcdatamodeld */,
+				FBF19A23228A9D890041D859 /* Bridge-Header.h */,
 			);
 			path = Telligent;
 			sourceTree = "<group>";
@@ -128,8 +129,7 @@
 				E6CB800E1F1E11DA00B1EE81 /* Sources */,
 				E6CB800F1F1E11DA00B1EE81 /* Frameworks */,
 				E6CB80101F1E11DA00B1EE81 /* Resources */,
-				D3D285AA2B15FF45871076E9 /* [CP] Embed Pods Frameworks */,
-				CF64087A57C878A3DF7A531B /* [CP] Copy Pods Resources */,
+				DEC652408F108D37C811396C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF19A0D228A955B0041D859 /* Podfile in Resources */,
 				E6CB80231F1E11DA00B1EE81 /* LaunchScreen.storyboard in Resources */,
 				FBD72991223F407000D89E9D /* InfoPlist.strings in Resources */,
 				E6CB80201F1E11DA00B1EE81 /* Assets.xcassets in Resources */,
@@ -206,43 +207,46 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Telligent-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF64087A57C878A3DF7A531B /* [CP] Copy Pods Resources */ = {
+		DEC652408F108D37C811396C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Telligent/Pods-Telligent-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3D285AA2B15FF45871076E9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Telligent/Pods-Telligent-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Telligent/Pods-Telligent-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Telligent/Pods-Telligent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -255,10 +259,12 @@
 				E67803421F53E75B004ED81E /* MenuTVC.swift in Sources */,
 				E6CB80181F1E11DA00B1EE81 /* ViewController.swift in Sources */,
 				E67803401F4A65E1004ED81E /* VerificationVC.swift in Sources */,
+				FBF19A13228A9AEE0041D859 /* Reachability.m in Sources */,
 				E678033C1F49D62D004ED81E /* MenuVC.swift in Sources */,
 				FB44D1B920ABD56D004BC9FD /* MainMkVC.swift in Sources */,
 				E622B5CF1F74AE4500CC42A1 /* Connectivity.swift in Sources */,
 				E6CB801E1F1E11DA00B1EE81 /* Telligent.xcdatamodeld in Sources */,
+				FBF19A10228A99630041D859 /* MBProgressHUD.m in Sources */,
 				E6CB80161F1E11DA00B1EE81 /* AppDelegate.swift in Sources */,
 				E67803441F540D96004ED81E /* MainVC.swift in Sources */,
 			);
@@ -351,6 +357,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +434,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4b9020c8-decb-41f1-8038-10856a576dc5";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_Dev;
-				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Telligent/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,7 +458,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "da4c2dfc-3d40-456d-ba74-970103e267a3";
 				PROVISIONING_PROFILE_SPECIFIER = SocialChat_AS;
-				SWIFT_OBJC_BRIDGING_HEADER = "swift-MBProgressHUD/swift-MBProgressHUD-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Telligent/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
